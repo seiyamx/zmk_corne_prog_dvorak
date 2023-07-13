@@ -20,23 +20,23 @@
 // include name or reference in keymap
 // Format: 
 //      name        reference  key1 key2 
-#define TD_TAB      &td0    // TAB ESC
-#define TD_CAPLOCK  &td1    // LSHIFT CAPSLOCK 
-#define TD_SPC      &td2    // SPACE ENTER 
-#define TD_SLSH     &td3    // SLASH QMARK
-#define TD_QUOTE    &td4    // QUOTE DOUBLE_QUOTES
-#define TD_EQL      &td5    // EQUAL PLUS
-#define TD_BSLS     &td6    // BACKSLASH PIPE 
-#define TD_MINUS    &td7    // MINUS UNDERSCORE
-#define TD_SCLN     &td8    // SEMICOLON COLON 
-#define TD_COMM     &td9    // COMMA LESS_THAN 
-#define TD_DOT      &td10   // PERIOD GREATER_THAN 
-#define TD_BACKF    &td11   // GRAVE TILDE
-#define TD_ALT      &td12   // LALT GUI
-#define TD_ARR      &td13   // Q AT (@)
-#define TD_ATCAT    &td14   // AT CARET 
-#define TD_TAW      &td15   // TAB LWIN
-#define TD_SCLOCK   &td16   // (S)LSHIFT CAPSLOCK (Sticky shift)
+// #define TD_TAB      &td0    // TAB ESC
+// #define TD_CAPLOCK  &td1    // LSHIFT CAPSLOCK 
+// #define TD_SPC      &td2    // SPACE ENTER 
+// #define TD_SLSH     &td3    // SLASH QMARK
+// #define TD_QUOTE    &td4    // QUOTE DOUBLE_QUOTES
+// #define TD_EQL      &td5    // EQUAL PLUS
+// #define TD_BSLS     &td6    // BACKSLASH PIPE 
+// #define TD_MINUS    &td7    // MINUS UNDERSCORE
+// #define TD_SCLN     &td8    // SEMICOLON COLON 
+// #define TD_COMM     &td9    // COMMA LESS_THAN 
+// #define TD_DOT      &td10   // PERIOD GREATER_THAN 
+// #define TD_BACKF    &td11   // GRAVE TILDE
+// #define TD_ALT      &td12   // LALT GUI
+// #define TD_ARR      &td13   // Q AT (@)
+// #define TD_ATCAT    &td14   // AT CARET 
+// #define TD_TAW      &td15   // TAB LWIN
+// #define TD_SCLOCK   &td16   // (S)LSHIFT CAPSLOCK (Sticky shift)
 
 // include &name in keymap to use
 // FORMAT
@@ -286,10 +286,10 @@
 // | LSFT:CAP |' "  | q @ | J   | K   |  X  |         |  B  |  M   |  W  |  V  |  Z  | TAB  |
 //                        | GUI | LWR | SPC |         | ENT | RSE  | ALT |
                         bindings = <
-   TD_TAB     TD_SCLN  TD_COMM TD_DOT &kp P &kp Y                   &kp F &kp G  &kp C     &kp R   &kp L    &kp BSPC
-   &kp LCTRL  &kp A    &kp O   &kp E  &kp U &kp I                   &kp D &kp H  &kp T     &kp N   &kp S    &kp DEL
-  TD_SCLOCK TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z    TD_TAW
-                             TD_ALT  &mo 1 TD_SPC                   TD_SPC &mo 2 &kp RALT
+   &td0     &td8 &td9 &td10 &kp P &kp Y                  &kp F &kp G  &kp C     &kp R   &kp L    &kp BSPC
+   &kp LCTRL  &kp A    &kp O   &kp E  &kp U &kp I        &kp D &kp H  &kp T     &kp N   &kp S    &kp DEL
+  &td16 &td4 &td13  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z    &td15
+                             &td12  &mo 1 &td2                   &td2 &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
@@ -314,8 +314,8 @@
 //                    | GUI |     | SPC |       | ENT |     | ALT |
                         bindings = <
    &trans     &kp LBKT    &kp LBRC     &kp RBRC     &kp LPAR    &kp EQUAL       &kp STAR    &kp RPAR  &kp PLUS  &kp RBKT  &kp EXCL   &trans    
-   &kp LCTRL  &kp TILDE   &kp PRCNT    &kp GRAVE    TD_SLSH     TD_ATCAT        &trans      &trans    &trans    &trans    &trans     &trans
-   &trans     &kp DLLR    &kp AMPS     &kp HASH     TD_MINUS    TD_BSLS         &trans      &trans    &trans    &trans    &trans     &trans
+   &kp LCTRL  &kp TILDE   &kp PRCNT    &kp GRAVE    &td3     &td14        &trans      &trans    &trans    &trans    &trans     &trans
+   &trans     &kp DLLR    &kp AMPS     &kp HASH     &td7    &td6         &trans      &trans    &trans    &trans    &trans     &trans
                     	               &trans       &trans      &trans          &trans      &trans    &trans
                         >;
                 };
