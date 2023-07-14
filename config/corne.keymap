@@ -359,16 +359,16 @@
 
         qwerty {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+     &td0  &kp Q  &kp W   &kp E         &kp R  &kp T    &kp Y     &kp U  &kp I  &kp O     &kp P  &kp BACKSPACE
+&kp LCTRL  &kp A  &kp S   &kp D         &kp F  &kp G    &kp H     &kp J  &kp K  &kp L      &td8           &td4
+     &td1  &kp Z  &kp X   &kp C         &kp V  &kp B    &kp N     &kp M   &td9  &td10  &kp FSLH           &td6
+                         &trans  &kp LEFT_GUI   &td2     &td2  &kp LALT  &td11
             >;
 
             label = "QWRT";
         };
 
-        dev_layer {
+        dvorak {
             // -----------------------------------------------------------------------------------------
             // |TAB:ESC   | ; : | , < | . > |  P  |  Y  |         | F   |  G   |  C  |  R  |  L  | BKSP |
             // | CTRL     |  A  |  O  |  E  |  U  |  I  |         |  D  |  H   |  T  |  N  |  S  |  DEL |
