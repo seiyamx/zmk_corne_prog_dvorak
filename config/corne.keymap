@@ -319,6 +319,15 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        td17: tap_dance_17 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_17";
+            #binding-cells = <0>;
+            bindings =
+                <&str1>,
+                <&str2>,
+                <&str3>;
+        };
     };
 
     // LAYERS
@@ -351,6 +360,27 @@
             bindings = <&to 0>;
             key-positions = <36 41>;
             layers = <1>;
+        };
+    };
+
+    macros {
+        str1: str1 {
+            compatible = "zmk,behavior-macro";
+            label = "STR1";
+            #binding-cells = <0>;
+            bindings = <&kp N3 &kp DLLR &kp LS(T) &kp LS(R) &kp N4 &kp T &kp N0 &kp S>;
+        };
+        str2: str2 {
+            compatible = "zmk,behavior-macro";
+            label = "STR2";
+            #binding-cells = <0>;
+            bindings = <&kp N3 &kp DLLR &kp LS(T) &kp LS(R) &kp N4 &kp T &kp N0 &kp S &kp N1 &kp N9 &kp N8 &kp N5 &kp N0 &kp N0 &kp N7>;
+        };
+        str3: str3 {
+            compatible = "zmk,behavior-macro";
+            label = "STR3";
+            #binding-cells = <0>;
+            bindings = <&kp LS(S) &kp O &kp F &kp T &kp T &kp E &kp K &kp DOT &kp N1 &kp N8>;
         };
     };
 
@@ -394,8 +424,8 @@
 
             bindings = <
  &trans  &seven_lbkt  &five_lbrc  &three_rbrc  &one_lpar  &nine_equal     &zero_s  &two_par   &four_pl  &six_rbkt  &eight_exlm  &trans
-&kp F11       &kp F1      &kp F2       &kp F3     &kp F4       &kp F5    &kp HOME    &kp UP    &kp END  &kp PG_UP       &trans  &trans
- &trans       &kp F6      &kp F7       &kp F8     &kp F9      &kp F10    &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN       &trans  &trans
+&kp F11       &kp F1      &kp F2       &kp F3     &kp F4       &kp F5    &kp HOME    &kp UP    &kp END  &kp PG_UP        &none   &none
+ &trans       &kp F6      &kp F7       &kp F8     &kp F9      &kp F10    &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN        &none   &none
                                        &trans     &trans       &trans      &trans    &trans     &trans
             >;
 
@@ -410,10 +440,10 @@
             //                    | GUI |     | SPC |       | ENT |     | ALT |
 
             bindings = <
-   &trans   &kp LBKT   &kp LBRC   &kp RBRC  &kp LPAR  &kp EQUAL    &kp STAR  &kp RPAR  &kp PLUS  &kp RBKT  &kp EXCL  &trans
-&kp LCTRL  &kp TILDE  &kp PRCNT  &kp GRAVE      &td3      &td14      &trans    &trans    &trans    &trans    &trans  &trans
-   &trans   &kp DLLR   &kp AMPS   &kp HASH      &td7       &td6      &trans    &trans    &trans    &trans    &trans  &trans
-                                    &trans    &trans     &trans      &trans    &trans    &trans
+&trans   &kp LBKT   &kp LBRC   &kp RBRC  &kp LPAR  &kp EQUAL    &kp STAR  &kp RPAR  &kp PLUS  &kp RBKT  &kp EXCL  &trans
+&trans  &kp TILDE  &kp PRCNT  &kp GRAVE      &td3      &td14       &none     &none     &none     &none     &none   &none
+&trans   &kp DLLR   &kp AMPS   &kp HASH      &td7       &td6       &none     &none     &none     &none     &none   &td17
+                                 &trans    &trans     &trans      &trans    &trans    &trans
             >;
 
             label = "SYM";
