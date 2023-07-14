@@ -376,9 +376,9 @@
             //                        | GUI | LWR | SPC |         | ENT | RSE  | ALT |
 
             bindings = <
-  &td0   &td8   &td9   &td10   &kp P   &kp Y     &kp F   &kp G   &kp C  &kp R  &kp L  &kp BSPC
+&trans   &td8   &td9   &td10   &kp P   &kp Y     &kp F   &kp G   &kp C  &kp R  &kp L  &kp BSPC
 &trans  &kp A  &kp O   &kp E   &kp U   &kp I     &kp D   &kp H   &kp T  &kp N  &kp S   &kp DEL
- &td16   &td4  &td13   &kp J   &kp K   &kp X     &kp B   &kp M   &kp W  &kp V  &kp Z     &td15
+&trans   &td4  &td13   &kp J   &kp K   &kp X     &kp B   &kp M   &kp W  &kp V  &kp Z    &trans
                       &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
