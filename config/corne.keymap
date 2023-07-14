@@ -359,10 +359,10 @@
 
         qwerty {
             bindings = <
-     &td0  &kp Q  &kp W   &kp E         &kp R  &kp T    &kp Y     &kp U  &kp I  &kp O     &kp P  &kp BACKSPACE
-&kp LCTRL  &kp A  &kp S   &kp D         &kp F  &kp G    &kp H     &kp J  &kp K  &kp L      &td8           &td4
-     &td1  &kp Z  &kp X   &kp C         &kp V  &kp B    &kp N     &kp M   &td9  &td10  &kp FSLH           &td6
-                         &trans  &kp LEFT_GUI   &td2     &td2  &kp LALT  &td11
+     &td0  &kp Q  &kp W   &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I  &kp O     &kp P  &kp BACKSPACE
+&kp LCTRL  &kp A  &kp S   &kp D  &kp F  &kp G    &kp H  &kp J  &kp K  &kp L      &td8           &td4
+     &td1  &kp Z  &kp X   &kp C  &kp V  &kp B    &kp N  &kp M   &td9  &td10  &kp FSLH           &td6
+                         &trans  &mo 2   &td2     &td2  &mo 3  &td11
             >;
 
             label = "QWRT";
@@ -376,16 +376,16 @@
             //                        | GUI | LWR | SPC |         | ENT | RSE  | ALT |
 
             bindings = <
-     &td0   &td8   &td9  &td10  &kp P  &kp Y    &kp F  &kp G     &kp C  &kp R  &kp L  &kp BSPC
-&kp LCTRL  &kp A  &kp O  &kp E  &kp U  &kp I    &kp D  &kp H     &kp T  &kp N  &kp S   &kp DEL
-    &td16   &td4  &td13  &kp J  &kp K  &kp X    &kp B  &kp M     &kp W  &kp V  &kp Z     &td15
-                         &td12  &mo 2   &td2     &td2  &mo 3  &kp RALT
+  &td0   &td8   &td9  &td10   &kp P  &kp Y    &kp F   &kp G     &kp C  &kp R  &kp L  &kp BSPC
+&trans  &kp A  &kp O  &kp E   &kp U  &kp I    &kp D   &kp H     &kp T  &kp N  &kp S   &kp DEL
+ &td16   &td4  &td13  &kp J   &kp K  &kp X    &kp B   &kp M     &kp W  &kp V  &kp Z     &td15
+                      &td12  &trans   &td2     &td2  &trans  &kp RALT
             >;
 
             label = "DEV";
         };
 
-        nav_func {
+        devorak_nvfn {
             // -----------------------------------------------------------------------------------------
             // |  ESC   |  7   |  5  |  3  |  1  |  9  |            |  0  |  2  |  4  |  6  |  8  |      |
             // | F11    |  F1  |  F2 |  F3 |  F4 |  F5 |            | LFT | DWN |  UP | RGT |     |      |
@@ -399,7 +399,7 @@
                                        &trans     &trans       &trans      &trans    &trans     &trans
             >;
 
-            label = "NFUN";
+            label = "DEVF";
         };
 
         symbol {
@@ -427,24 +427,13 @@
             //                    | GUI |     | SPC |   | ENT     |     | ALT |
 
             bindings = <
-   &kp ESC        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp LEFT    &kp C_PREV      &kp C_PP  &kp C_NEXT  &trans  &trans
-    &trans        &trans        &trans        &trans        &trans        &trans    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP      &trans  &trans  &trans
-                                            &kp LGUI        &trans     &kp SPACE       &kp RET        &trans      &kp RALT
+   &kp ESC         &none         &none         &none         &none         &none         &none         &none         &none       &none  &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp LEFT    &kp C_PREV      &kp C_PP  &kp C_NEXT  &none  &none
+     &none         &none         &none         &none         &none         &none    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP       &none  &none  &none
+                                            &kp LGUI         &none     &kp SPACE       &kp RET         &none      &kp RALT
             >;
 
             label = "CFG";
-        };
-
-        numbers {
-            bindings = <
-&none  &none  &kp N1  &kp N2  &kp N3   &none     &none  &kp N7  &kp N8  &kp N9  &kp ASTRK      &none
-&none  &none  &kp N4  &kp N5  &kp N6   &none     &none  &kp N4  &kp N5  &kp N6   &kp PLUS      &none
-&none  &none  &kp N7  &kp N8  &kp N9  &kp N0    &kp N0  &kp N1  &kp N2  &kp N3  &kp MINUS  &kp SLASH
-                      &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "NUMB";
         };
     };
 };
