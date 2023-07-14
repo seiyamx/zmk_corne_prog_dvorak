@@ -443,7 +443,7 @@
 &trans   &kp LBKT   &kp LBRC   &kp RBRC  &kp LPAR  &kp EQUAL    &kp STAR  &kp RPAR  &kp PLUS  &kp RBKT  &kp EXCL  &trans
 &trans  &kp TILDE  &kp PRCNT  &kp GRAVE      &td3      &td14       &none     &none     &none     &none     &none   &none
 &trans   &kp DLLR   &kp AMPS   &kp HASH      &td7       &td6       &none     &none     &none     &none     &none   &td17
-                                 &trans    &trans     &trans      &trans    &trans    &trans
+                                 &trans    &trans     &trans      &trans     &none    &trans
             >;
 
             label = "SYM";
